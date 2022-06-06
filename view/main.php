@@ -57,13 +57,16 @@ require '../bd/conexion.php';
             <a class="nav-link" href="#Actividades"><i class="far fa-address-book"></i>Actividades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Galardones</a>
+            <a class="nav-link" href="#Galardones"><i class="far fa-clone"></i>Galardones</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tienda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Qr</a>
+            <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="qrCode.php"><i class="far fa-clone"></i>Qr</a>
           </li>
         </ul>
       </div>
@@ -117,8 +120,8 @@ require '../bd/conexion.php';
     </section>
 
     <section>
-      <div class="parallax-two">
-        <h2 id="Actividades">ACTIVIDADES</h2>
+      <div id="Actividades" class="parallax-two">
+        <h2>ACTIVIDADES</h2>
       </div>
     </section>
 
@@ -167,7 +170,7 @@ require '../bd/conexion.php';
   </section>
 
   <section>
-    <div class="parallax-three">
+    <div id="Galardones" class="parallax-three">
       <h2>GALARDONES</h2>
   </section>
 

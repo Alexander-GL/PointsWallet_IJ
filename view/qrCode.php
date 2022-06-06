@@ -8,7 +8,6 @@
     <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <script type="text/javascript" src="https://webqr.com/webqr.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="../css/tarjeta.css">
 	<link rel="stylesheet" type="text/css" href="../css/qr_cod.css">
@@ -49,10 +48,10 @@ require '../bd/conexion.php';
                         <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tienda</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Qr</a>
+                        <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Cuenta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="qrCode.php"><i class="far fa-clone"></i>Cuenta</a>
+                        <a class="nav-link" href="qrCode.php"><i class="far fa-clone"></i>Qr</a>
                     </li>
                 </ul>
             </div>
