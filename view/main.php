@@ -6,19 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iglesia Juvenil Adolescentes</title>
-    <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <script type="text/javascript" src="https://webqr.com/webqr.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/qr_cod.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
+<style>
     /* Height for devices larger than 576px */
       @media (min-width: 992px) {
         #inicio {
-          margin-top: -58.59px;
+          width: 100%;
+          height: auto;
         }
       }
     </style>
@@ -46,10 +43,10 @@ require '../bd/conexion.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i>Inicio</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Actividades</a>
                 </li>
                 <li class="nav-item">
@@ -59,7 +56,7 @@ require '../bd/conexion.php';
                     <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tienda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="usuarios.php"><i class="far fa-chart-bar"></i>Qr</a>
+                    <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Qr</a>
                 </li>
             </ul>
         </div>
@@ -123,7 +120,7 @@ require '../bd/conexion.php';
     </div>
   </section>
     <!-- Background image -->
-    <img id="inicio" class="parallax-bank">
+    <img id="inicio" class="parallax-bank" style="margin-top: 100px;">
         </img>
         <!-- Background image -->
     <div class="container col-12 p-5">
@@ -248,7 +245,6 @@ require '../bd/conexion.php';
   <!-- Copyright -->
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="../js/animation_navbar.js"></script>
 </body>
 </html>

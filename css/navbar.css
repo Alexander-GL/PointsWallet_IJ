@@ -183,18 +183,3 @@ i {
         left: -25px;
     }
 }
-
-.parallax-bank {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url("../images/GALARDONES_BANNER_01.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-}
