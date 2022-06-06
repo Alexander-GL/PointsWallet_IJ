@@ -10,6 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../css/tarjeta.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
 <body>
 <?php 
@@ -46,6 +47,9 @@ require '../bd/conexion.php';
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Qr</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="qrCode.php"><i class="far fa-clone"></i>Cuenta</a>
                     </li>
                 </ul>
             </div>
@@ -102,7 +106,7 @@ require '../bd/conexion.php';
   </section>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/entradas_salidas.js"></script>
 <script type="text/javascript" src="../js/animation_navbar.js"></script>
-  <script type="text/javascript" src="../js/entradas_salidas.js"></script>
 </body>
 </html>

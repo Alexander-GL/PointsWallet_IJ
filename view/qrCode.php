@@ -10,41 +10,67 @@
     <script type="text/javascript" src="https://webqr.com/webqr.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/tarjeta.css">
 	<link rel="stylesheet" type="text/css" href="../css/qr_cod.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-custom navbar-mainbg p-0 m-0">
-    <a class="navbar-brand navbar-logo" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i>Inicio</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Qr</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="usuarios.php"><i class="far fa-chart-bar"></i>Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cuenta.php"><i class="far fa-copy"></i>Movimientos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<?php 
+
+require '../bd/conexion.php';
+	/*Inicializamos la sesión y validamos si la sesion esta activa que en caso contrario
+      se retorna al Login*/
+        session_start();
+        if(empty($_SESSION['active']))
+        {
+	      header('location: ../index.php');
+        }
+		?>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-custom navbar-mainbg p-0 m-0">
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.php"><i class="fas fa-tachometer-alt"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Galardones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Tienda</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cuenta.php"><i class="far fa-chart-bar"></i>Qr</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="qrCode.php"><i class="far fa-clone"></i>Cuenta</a>
+                    </li>
+                </ul>
+            </div>
+              <!-- Right elements -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="text-muted disabled"> <?php echo $_SESSION['nombre'].' ('.$_SESSION['emailNum'].')'?></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="salir.php" class="nav-link"> Cerrar sesión <i class="fa fa-door-open"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- Right elements -->
+          </div>
+        </nav>
+        <!-- Navbar -->
     <div id="main">
         <div id="header">
             <div style="position:relative;top:+20px;left:0px;">
