@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "html5-qrcode": "^2.2.1",
+    "install": "^0.13.0",
+    "mdb-ui-kit": "^4.0.0",
+    "mdbootstrap": "^4.20.0",
+    "qr-scanner": "^1.4.1",
+    "vue": "^3.2.36"
+  }
+}

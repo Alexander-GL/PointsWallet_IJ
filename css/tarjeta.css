@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    transition: all 250ms;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #263238;
+    position: relative;
+}
+
+
+/* App Bar */
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px 16px;
+}
+
+header p {
+    margin: 0;
+}
+
+header img {
+    width: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+
+/* Creddit Card */
+
+.credit-card {
+    position: relative;
+    width: calc(100% - 32px);
+    margin: 32px 16px;
+    padding: 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 1px #212121;
+}
+
+.credit-card::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background: url("https://media.istockphoto.com/vectors/warm-to-cool-abstract-layered-wavy-background-vector-id1291199071?k=20&m=1291199071&s=612x612&w=0&h=QYBTfMQy-a-fTMlRSN3AoGRt74BCsX_YsvQ3UAPS_L0=");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(10px) brightness(0.8);
+}
+
+.credit-card :is(p,
+h2) {
+    margin: 0;
+}
+
+.credit-card p:first-of-type {
+    margin-top: 32px;
+    font-weight: 100;
+}
+
+.credit-card p:last-of-type {
+    margin-top: 48px;
+}
+
+
+/* Status */
+
+.stats {
+    position: relative;
+    width: calc(100% - 32px);
+    margin: 0px 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.stats div {
+    width: 100%;
+    background-color: #212121;
+    border-radius: 16px;
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 15px 1px #212121;
+}
+
+.stats div p {
+    margin: 0;
+}
+
+.stats div p:first-of-type {
+    font-weight: 100;
+}
+
+.stats div p:last-of-type {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Transactions */
+
+.transactions {
+    position: fixed;
+    width: calc(100% - 32px);
+    margin: 0px 16px;
+    background-color: #212121;
+    bottom: 0;
+    height: 35vh;
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    box-shadow: 0px 0px 15px 1px #212121;
+}
+
+.transactions .indicator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 10px;
+    border: none;
+    background-color: #bdbdbd;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: flex-start;
+}
+
+.transactions .indicator:is(:hover,
+ :active) {
+    background-color: #ffffff;
+}
+
+
+/* RECORDS */
+
+.transactions .expense {
+    margin-top: 32px;
+    width: 100%;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 64px auto auto;
+    grid-template-areas: "avatar date amount" "avatar title amount";
+    gap: 16px;
+}
+
+.transactions .expense p.avatar {
+    grid-area: avatar;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.transactions .expense p.date {
+    grid-area: date;
+}
+
+.transactions .expense p.amount {
+    grid-area: amount;
+}
+
+.transactions .expense p.title {
+    grid-area: title;
+    font-weight: 100;
+    color: #eeeeee;
+}
+
+.transactions .expense p {
+    margin: 0;
+}
+
+.transactions .expense p:is(.avatar,
+.amount) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.transactions .expense.income p.avatar {
+    background-color: #4caf50;
+}
+
+.transactions .expense.income p.amount {
+    color: #4caf50;
+}
+
+.transactions .expense.outcome p.avatar {
+    background-color: #f44336;
+}
+
+.transactions .expense.outcome p.amount {
+    color: #f44336;
+}
+
+
+/*  */
+
+
+/* OPEN */
+
+
+/*  */
+
+
+/* TODO : MORPH CARD */
+
+.open .transactions {
+    margin: 0;
+    height: 80vh;
+    width: 100%;
+}
