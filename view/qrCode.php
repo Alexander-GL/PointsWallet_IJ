@@ -10,6 +10,7 @@
     <script type="text/javascript" src="https://webqr.com/webqr.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="../css/tarjeta.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/qr_cod.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,6 +27,7 @@ require '../bd/conexion.php';
 	      header('location: ../index.php');
         }
 		?>
+  <header>
         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-custom navbar-mainbg p-0 m-0">
             <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,6 +72,8 @@ require '../bd/conexion.php';
           </div>
         </nav>
         <!-- Navbar -->
+  </header>
+
     <div id="main">
         <div id="header">
             <div style="position:relative;top:+20px;left:0px;">
