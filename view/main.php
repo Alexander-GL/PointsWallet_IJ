@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <style>
     /* Height for devices larger than 576px */
     @media (min-width: 992px) {
@@ -169,24 +170,24 @@ require '../bd/conexion.php';
   </div>
   </section>
 
-  <section>
-    <div id="Galardones" class="parallax-three">
-      <h2>GALARDONES</h2>
-  </section>
+    <section>
+      <div id="Galardones" class="parallax-three">
+        <h2>GALARDONES</h2>
+    </section>
 
-  <section>
-    <div class="block-img">
-      <div class="parallax-one" style=" background-image: url('../images/GALARDONES.jpg');"> </div>
-      <div class="parallax-one" style=" background-image: url('../images/GALARDONES_02.jpg'); margin-top: -30px;">
+    <section>
+      <div class="block-img">
+        <div class="parallax-one" style=" background-image: url('../images/GALARDONES.jpg');"> </div>
+        <div class="parallax-one" style=" background-image: url('../images/GALARDONES_02.jpg'); margin-top: -30px;">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  </main>
+    </main>
 
-  <footer class="bg-dark text-center text-white">
+    <footer class="bg-dark text-center text-white">
       <!-- Section: Social media -->
-      <section class="mb-4 pt-4">
+      <section id="container" class="mb-4 pt-4">
         <!-- Facebook -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;"
           href="https://www.facebook.com/ijadolescentes" role="button"><i class="fab fa-facebook-f"></i></a>
@@ -204,15 +205,15 @@ require '../bd/conexion.php';
           href="https://www.instagram.com/iglesiajuvenilcdo/" role="button"><i class="fab fa-instagram"></i></a>
       </section>
       <!-- Section: Social media -->
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="https://www.facebook.com/ijadolescentes">Facebook.com/IJAdolescentes</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="../js/animation_navbar.js"></script>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://www.facebook.com/ijadolescentes">Facebook.com/IJAdolescentes</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/animation_navbar.js"></script>
 </body>
 
 </html>

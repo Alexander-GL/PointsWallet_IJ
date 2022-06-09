@@ -1,3 +1,8 @@
+body {
+    width: 100%;
+    text-align: center;
+}
+
 img {
     border: 0;
 }
@@ -67,9 +72,13 @@ img {
 #outdiv {
     width: 640px;
     height: 480px;
+    border: solid;
+    border-width: 3px 3px 3px 3px;
 }
 
 #result {
+    border: solid;
+    border-width: 1px 1px 1px 1px;
     padding: 20px;
     width: 70%;
 }
@@ -83,10 +92,17 @@ li {
     display: inline;
     padding-right: 0.5em;
     padding-left: 0.5em;
+    font-weight: bold;
+    border-right: 1px solid #333333;
 }
 
 li a {
     text-decoration: none;
+    color: black;
+}
+
+#footer a {
+    color: black;
 }
 
 .tsel {

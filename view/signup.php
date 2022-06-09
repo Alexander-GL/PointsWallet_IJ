@@ -86,14 +86,16 @@
                 <div class="row">
                     <div class="col-sm-4 text-black">
                         <div class="px-5 ms-xl-5 mb-3 mt-5">
-                            <img src="../images/IJ_azul.png" alt="Login image">
+                            <img src="../images/IJ_azul.png" class="img-responsive ml-3" alt="Login image">
+                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=https://mikethedj4.github.io/kodeWeave/editor/&chs=160x160&chld=L|0"
+                               class="img-thumbnail img-responsive ml-4" data-output="qrcode" style=" position:relative; top:-15px; left: 15%; width: 40%; height: auto;">
                         </div>
-    
+
                         <div class="d-flex align-items-center h-custom-2 pl-5 px-5 ms-xl-4 pt-5 pt-xl-0 mt-xl-n5">                            
                         <form method="POST" id="generador" enctype="multipart/form-data" onsubmit="verificarPasswords(); return false"  class="pl-2" style="width: 25rem;" keyup>
                             <div id="msg"></div>
                                 
-                                <h3 class="fw-normal mt-5" style="letter-spacing: 3px;">Registrate</h3>
+                                <h3 class="fw-normal mt-2" style="letter-spacing: 3px;">Registrate</h3>
                                 <h6 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px;">Es rápido y fácil.</h6>
                                 <div class="form-outline mb-2 row">
                                     <div class="col-6 pr-1">
@@ -106,7 +108,7 @@
                                     </div>
                                 </div>
                                 <div class="form-outline mb-2">
-                                    <input type="text" name="EmailNum" class="form-control form-control-md" placeholder="Correo electrónico o número de teléfono" required>
+                                    <input type="text" name="EmailNum" class="form-control form-control-md" aria-label="http://website.com/" data-grab="url" placeholder="Correo electrónico o número de teléfono" required>
                                     <input type="hidden" name="idUsuario" value="">
                                 </div>
                                 <div class="form-outline mb-2">
@@ -135,7 +137,7 @@
                                     </div>
                                 </div>
                                 <div class="form-outline row">
-                                    <div class="col-6 pr-1">
+                                    <div class="col-12">
                                         <div class="form-group">
                                             <select class="form-control" name="Rol" required="">
                                                 <option selected="" value="" disabled="" hidden=""> Rol</option>
@@ -147,22 +149,17 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-6 pl-1">
-                                        <div class="form-group">
-                                            <select class="form-control" name= "Tamaño Qr" id="Sizeqr" required="">
-                                                <option selected="" value="" disabled="" hidden=""> Tamaño Qr</option>
-                                                <optgroup label="">
-                                                    <option value='200'>Grande</option>
-                                                    <option value='150'>Mediano</option>
-                                                    <option value='100'>Chico</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="pt-1 pr-3 mb-4">
-                                    <input name="Enviar" id="login" class="btn btn-info btn-lg btn-block" type="submit" value="Registrarte">
-                                    <div class='result'> </div>
-                                </div>     
+                                <div class="form-outline mb-3 row">
+                                    <div class="col-6">
+                                        <input name="Enviar" id="login" class="btn btn-info btn-lg m-0" type="submit" value="Registrarte">
+                                    </div>   
+                                    <div class="col-6">
+                                        <button class="btn btn-success btn-block btn-lg m-0" data-qrcode="generate" type="button"><i class="fas fa-cog fa-spin"></i></button>
+                                    </div>     
+                                </div>  
+                                <div class='result'> </div>
+
                                 <div class="alerta text-center"><?php echo isset($alert) ? $alert : ''; ?></div>
                                 <p class="text-center">¿Ya tienes una cuenta? <a href="../index.php" class="link-info">Iniciar sesión</a></p>
                             </form>
@@ -223,6 +220,7 @@
     <script src="../js/script.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/js-button.js"></script>
+    <script type="text/javascript" src="../js/generate_qr.js"></script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
