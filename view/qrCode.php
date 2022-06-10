@@ -84,7 +84,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mt-5">
-                <video id="preview" width="100%"></video>
+                <img id="marco" src="../images/MarcoQr.png" alt="Borde QR">
+                <video id="preview" width="60%"></video>
             </div>
             <div class="col-md-6 mt-5">
                 <form action="asistencia.php" method="POST" class="form-horizontal">
@@ -95,6 +96,22 @@
         </div>
     </div>
 </main>
+
+        <style>
+            #marco {
+            display: block;
+            position: relative;
+            width: 530px;
+            height: 400px;
+            margin: 0px auto;
+            z-index: 10;
+            }
+            #preview {
+            position:absolute;
+            top: 77px;
+            left:117px;
+            }
+        </style>
 
         <script>
             let scanner = new Instascan.Scanner({ video: document.getElementById('preview')});
@@ -116,8 +133,8 @@
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/animation_navbar.js"></script>
         <script type="text/javascript" src="../js/load_qr.js"></script>
+        <script type="text/javascript" src="../js/animation_navbar.js"></script>
 </body>
 
 </html>
