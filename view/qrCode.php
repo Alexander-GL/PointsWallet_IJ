@@ -11,18 +11,15 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/tarjeta.css">
-    <link rel="stylesheet" type="text/css" href="../css/qr_cod.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-
 <body>
     <?php 
-
-require '../bd/conexion.php';
+    require '../bd/conexion.php';
 	/*Inicializamos la sesión y validamos si la sesion esta activa que en caso contrario
       se retorna al Login*/
         session_start();
@@ -83,20 +80,21 @@ require '../bd/conexion.php';
         </nav>
         <!-- Navbar -->
     </header>
-
-        <div class="container mt-5">
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <video id="preview" width="100%"></video>
-                </div>
-                <div class="col-md-6">
-                    <form action="asistencia.php" method="POST" class="form-horizontal">
-                        <label>ASISTENCIA QR</label>
-                        <input type="text" name="text" id="text" readonly="" placeholder="Asistencia QR" class="form-control">    
-                    </form>
-                </div>
+<main class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <video id="preview" width="100%"></video>
+            </div>
+            <div class="col-md-6 mt-5">
+                <form action="asistencia.php" method="POST" class="form-horizontal">
+                    <label class="text-uppercase">Asistencia QR</label>
+                    <input type="text" name="text" id="text" readonly="" placeholder="Asistencia QR" class="form-control">    
+                </form>
             </div>
         </div>
+    </div>
+</main>
 
         <script>
             let scanner = new Instascan.Scanner({ video: document.getElementById('preview')});
@@ -116,8 +114,6 @@ require '../bd/conexion.php';
             });
 
         </script>
-        <canvas id="qr-canvas" width="800" height="600"></canvas>
-        <canvas id="qr-canvas" width="800" height="600"></canvas>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="text/javascript" src="../js/animation_navbar.js"></script>
