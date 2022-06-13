@@ -101,14 +101,14 @@
             #marco {
             display: block;
             position: relative;
-            width: 530px;
-            height: 400px;
+            width: 300px;
+            height: 200px;
             margin: 0px auto;
             z-index: 10;
             }
             #preview {
             position:absolute;
-            top: 77px;
+            top: 0px;
             left:117px;
             }
         </style>

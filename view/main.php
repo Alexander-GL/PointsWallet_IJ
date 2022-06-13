@@ -22,6 +22,25 @@
         height: auto;
       }
     }
+    .box{
+      margin-top: 40px;
+      width: 100%;
+      height: auto;
+      background: #CCC;
+      overflow: hidden;
+    }
+
+    .box img{
+      width: 100%;
+      height: auto;
+    }
+    @supports(object-fit: cover){
+        .box img{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
   </style>
 </head>
 
@@ -90,9 +109,9 @@ require '../bd/conexion.php';
   </header>
 
   <div id="parallax-world-of-ugg">
-    <section>
-      <div id="logo_bank" class="parallax-one h-80 text-center bg-imag"></div>
-    </section>
+      <div class="box">
+        <img id="logo_bank" src="../images/GALARDONES_BANNER_01.jpg" alt="Cargando imagen...">
+      </div>
 
     <section>
       <div class="block">
@@ -128,7 +147,7 @@ require '../bd/conexion.php';
 
     <section>
       <div class="block-img col-12">
-          <div class="card-group  p-5">
+          <div class="card-group p-3">
             <div class="card">
               <img src="../images/ACT_02.jpg" class="card-img-top" alt="Hollywood Sign on The Hill" />
               <div class="card-body">
@@ -145,7 +164,7 @@ require '../bd/conexion.php';
             <div class="card">
               <img src="../images/ACT_01.jpg" class="card-img-top" alt="Palm Springs Road" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h3 class="card-title">Card title</h3>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
               </div>
               <div class="card-footer">
@@ -155,7 +174,7 @@ require '../bd/conexion.php';
             <div class="card">
               <img src="../images/ACT_03.jpg" class="card-img-top" alt="Los Angeles Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h3 class="card-title">Card title</h3>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural lead-in to
                   additional content. This card has even longer content than the first to show
@@ -176,10 +195,10 @@ require '../bd/conexion.php';
     </section>
 
     <section>
-      <div class="block-img">
-        <div class="parallax-one" style=" background-image: url('../images/GALARDONES.jpg');"> </div>
-        <div class="parallax-one" style=" background-image: url('../images/GALARDONES_02.jpg'); margin-top: -30px;">
-        </div>
+    <div class="box">
+    <img id="logo_bank" src="../images/GALARDONES.jpg" alt="Cargando imagen galardones...">
+    <img id="logo_bank" src="../images/GALARDONES_02.jpg" alt="Cargando imagen galardones...">
+      </div>
       </div>
     </section>
 
